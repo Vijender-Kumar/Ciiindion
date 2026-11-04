@@ -58,5 +58,13 @@ nav.open{display:flex}nav a{border-bottom:0;padding:12px 4px}.two,.fgrid{grid-te
 .crow{display:flex;align-items:flex-start;gap:10px;margin:8px 0}
 .crow svg{width:18px;height:18px;flex:none;margin-top:4px;fill:var(--or)}
 .crow a{display:inline;padding:0;word-break:break-word}
+.hd-icon{display:flex;align-items:center;gap:10px}
+.hd-icon svg{width:30px;height:30px;fill:var(--or);flex:none}
+.pin{width:16px;height:16px;fill:var(--or);vertical-align:-2px;margin-right:6px}
+.addr-ok{background:none;border:0;padding:0;color:var(--char);font-size:1rem}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px #0003;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.crow svg.wa-ico{fill:#25d366}
 /* .hero-logo{display:block;height:64px;width:auto;background:#fff;padding:10px 16px;border-radius:12px;margin-bottom:28px}
 @media(max-width:860px){.hero-logo{height:52px;margin-bottom:20px}} */

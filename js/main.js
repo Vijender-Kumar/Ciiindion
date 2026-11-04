@@ -14,6 +14,11 @@ function setActive(){var y=window.scrollY+90,cur="home";
   links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+cur)})}
 window.addEventListener("scroll",setActive,{passive:true});setActive();
 
+/* WhatsApp + address links */
+var wa="https://wa.me/"+C.WHATSAPP_NUMBER+"?text="+encodeURIComponent(C.WHATSAPP_MESSAGE);
+[].forEach.call(document.querySelectorAll("[data-wa]"),function(a){a.href=wa;a.target="_blank";a.rel="noopener"});
+[].forEach.call(document.querySelectorAll("[data-addr]"),function(el){if(C.ADDRESS_LINE)el.textContent=C.ADDRESS_LINE});
+
 /* Map */
 var q=encodeURIComponent(C.MAP_QUERY);
 $("#map").src=C.MAP_URL||("https://www.google.com/maps?q="+q+"&z="+(C.MAP_ZOOM||16)+"&output=embed");
