@@ -9,20 +9,14 @@ burger.addEventListener("click",function(){var o=nav.classList.toggle("open");bu
 nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");burger.setAttribute("aria-expanded","false")}});
 var links=[].slice.call(nav.querySelectorAll("a"));
 function setActive(){var y=window.scrollY+90,cur="home";
-  ["home","products","about","location"].forEach(function(id){if($("#"+id).offsetTop<=y)cur=id});
-  if($("#contact").getBoundingClientRect().top<window.innerHeight*0.5)cur="contact";
+  ["home","products","about"].forEach(function(id){if($("#"+id).offsetTop<=y)cur=id});
+  if($("#location").offsetTop<=y)cur="contact";
   links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+cur)})}
 window.addEventListener("scroll",setActive,{passive:true});setActive();
 
-/* Product showcase */
-var pg=$("#product-grid");
-C.PRODUCTS.forEach(function(p){var a=document.createElement("article");a.className="card"+(p.name.charAt(0)==="["?" ph":"");
-  if(p.image){var i=document.createElement("img");i.src=p.image;i.alt=p.name;i.loading="lazy";a.appendChild(i)}
-  var h=document.createElement("h3");h.textContent=p.name;var d=document.createElement("p");d.textContent=p.description;a.appendChild(h);a.appendChild(d);pg.appendChild(a)});
-
 /* Map */
 var q=encodeURIComponent(C.MAP_QUERY);
-$("#map").src=C.MAP_URL||("https://www.google.com/maps?q="+q+"&output=embed");
+$("#map").src=C.MAP_URL||("https://www.google.com/maps?q="+q+"&z="+(C.MAP_ZOOM||16)+"&output=embed");
 $("#directions").href="https://www.google.com/maps/dir/?api=1&destination="+q;
 if(C.ADDRESS_LINE){var ad=$("#addr");ad.textContent=C.ADDRESS_LINE;ad.className=""}
 
