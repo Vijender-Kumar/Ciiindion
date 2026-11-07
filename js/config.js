@@ -5,15 +5,6 @@ window.SITE_CONFIG = {
   MAP_QUERY: "Satya The Hive, Sector 102, Dwarka Expressway, Gurugram",
   MAP_ZOOM: 16,
   PHONE: "+91-9845292656",
-  PHONE2: "+91-8700220000",
-  WHATSAPP_NUMBER: "+918700220000",
+  WHATSAPP_NUMBER: "+919845292656",
   WHATSAPP_MESSAGE: "Hello CIIINDION, I would like to know more about your offerings.",
-  // MAP_URL: "",
-  // ADDRESS_LINE: "F-19 Satya The Hive, Dwarka Expy, Sector 102, Garhi Harsaru, Gurgaon, Haryana, 122505",
-  // No public product details exist yet. Replace these placeholders (image optional, e.g. "assets/images/website-images/p1.jpg").
-  // PRODUCTS: [
-  //   { name: "[Product name 1]", description: "[Add product description]", image: "" },
-  //   { name: "[Product name 2]", description: "[Add product description]", image: "" },
-  //   { name: "[Product name 3]", description: "[Add product description]", image: "" }
-  // ]
 };
