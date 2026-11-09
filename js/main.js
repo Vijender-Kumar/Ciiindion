@@ -10,7 +10,7 @@
   var links = [].slice.call(nav.querySelectorAll("a"));
   function setActive() {
     var y = window.scrollY + 90, cur = "home";
-    ["home", "about", "products", "leadership"].forEach(function (id) { if ($("#" + id).offsetTop <= y) cur = id });
+    ["home", "products", "infrastructure", "leadership", "about"].forEach(function (id) { if ($("#" + id).offsetTop <= y) cur = id });
     if ($("#location").offsetTop <= y) cur = "contact";
     links.forEach(function (a) { a.classList.toggle("active", a.getAttribute("href") === "#" + cur) })
   }
@@ -25,6 +25,7 @@
   var q = encodeURIComponent(C.MAP_QUERY);
   $("#map").src = C.MAP_URL || ("https://www.google.com/maps?q=" + q + "&z=" + (C.MAP_ZOOM || 16) + "&output=embed");
   $("#directions").href = "https://www.google.com/maps/dir/?api=1&destination=" + q;
+  [].forEach.call(document.querySelectorAll("[data-footer-dir]"), function (a) { a.href = "https://www.google.com/maps/dir/?api=1&destination=" + q });
   if (C.ADDRESS_LINE) { var ad = $("#addr"); ad.textContent = C.ADDRESS_LINE; ad.className = "" }
 
   /* Contact form */

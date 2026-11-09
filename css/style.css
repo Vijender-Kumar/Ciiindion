@@ -66,8 +66,6 @@ nav.open{display:flex}nav a{border-bottom:0;padding:12px 4px}.two,.fgrid{grid-te
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:30px;height:30px;fill:#fff}
 .crow svg.wa-ico{fill:#25d366}
-/* .hero-logo{display:block;height:64px;width:auto;background:#fff;padding:10px 16px;border-radius:12px;margin-bottom:28px}
-@media(max-width:860px){.hero-logo{height:52px;margin-bottom:20px}} */
 .intro{max-width:78ch;margin:0 0 8px;font-size:1.08rem;color:#4a5160}
 .leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
 .leader{background:var(--w);border:1px solid var(--line);border-radius:14px;padding:28px 20px;text-align:center;transition:transform .2s,border-color .2s,box-shadow .2s}
@@ -85,3 +83,7 @@ nav.open{display:flex}nav a{border-bottom:0;padding:12px 4px}.two,.fgrid{grid-te
 .in-circle:hover{background:#0a66c2}
 .in-name{color:var(--navy);font-weight:600;font-size:.92rem;text-decoration:none}
 .in-name:hover{color:#0a66c2;text-decoration:underline}
+.sectors{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card.sector{min-height:0;background:var(--w)}
+.sec.alt .card.sector{border-color:transparent}
+.sec.alt .card.sector:hover{border-color:var(--or)}
