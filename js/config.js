@@ -5,6 +5,6 @@ window.SITE_CONFIG = {
   MAP_QUERY: "Satya The Hive, Sector 102, Dwarka Expressway, Gurugram",
   MAP_ZOOM: 16,
   PHONE: "+91-9845292656",
-  WHATSAPP_NUMBER: "+919845292656",
-  WHATSAPP_MESSAGE: "Hello CIIINDION, I would like to know more about your offerings.",
+  // WHATSAPP_NUMBER: "+919845292656",
+  // WHATSAPP_MESSAGE: "Hello CIIINDION, I would like to know more about your offerings.",
 };
