@@ -89,7 +89,14 @@ function sendMails_(name, email, phone, msg) {
 }
 
 function authorizeMail() {
-  MailApp.sendEmail(TO_EMAIL, 'Test from CIIINDION script', 'Mail permission works.');
+  var opts = {
+    to: TO_EMAIL,
+    subject: 'Test from CIIINDION script',
+    body: 'Mail permission works.',
+    name: SENDER_NAME
+  };
+  if (CC_EMAIL) opts.cc = CC_EMAIL;
+  MailApp.sendEmail(opts);
 }
 
 function esc_(s) {
