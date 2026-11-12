@@ -88,6 +88,10 @@ function sendMails_(name, email, phone, msg) {
   }
 }
 
+function authorizeMail() {
+  MailApp.sendEmail(TO_EMAIL, 'Test from CIIINDION script', 'Mail permission works.');
+}
+
 function esc_(s) {
   return String(s).replace(/[&<>"']/g, function (c) {
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
